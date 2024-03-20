@@ -9,7 +9,9 @@ args = parser.parse_args()
 
 c = Calendar(requests.get(args.booking).text)
 
-c
-c.events
+print("Calendar")
+print(c)
+print("Events")
+print(c.events)
 e = list(c.timeline)[0]
-"Event '{}' started {}".format(e.name, e.begin.humanize())
+print "Event '{}' started {}".format(e.name, e.begin.humanize())
