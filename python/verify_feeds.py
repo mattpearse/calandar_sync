@@ -14,4 +14,4 @@ print(c)
 print("Events")
 print(c.events)
 e = list(c.timeline)[0]
-print "Event '{}' started {}".format(e.name, e.begin.humanize())
+print("Event '{}' started {}".format(e.name, e.begin.humanize()))
