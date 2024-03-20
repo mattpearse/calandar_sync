@@ -1,0 +1,31 @@
+name: verify
+
+on:
+  workflow_dispatch:
+    inputs:
+      env:
+        description: 'property'
+        required: true
+        default: oak
+        type: choice
+        options:
+        - oak
+        - chestnut
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  verify:
+    runs-on:  ubuntu-latest
+    environment: ${{ github.event.inputs.env }}
+    steps:
+    - uses: actions:checkout@v3
+
+    - name: Run script
+      run: |
+        pip install ics
+        python3 verify_feeds.py --booking "${{ secrets.BOOKING }}"
+      working-directory: ./python
+      
