@@ -62,6 +62,6 @@ for date in dates:
 
 if errors > 0:
     print("There were", errors, "errors")
-    sys.exit()
+    sys.exit(1)
 else:
     print("No errors")
