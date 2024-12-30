@@ -16,6 +16,6 @@ jobs:
     - name: Run script
       run: |
         pip install ics
-        python3 verify_feeds.py --end "${{ secrets.END_DATE}}" "${{ secrets.WHITBY }}"
+        python3 verify_feeds.py --end "${{ vars.END_DATE}}" "${{ secrets.WHITBY_BOOKINGCOM }}" "${{ secrets.WHITBY_AIRBNB }}"
       working-directory: ./python
       
