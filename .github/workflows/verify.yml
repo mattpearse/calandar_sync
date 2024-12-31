@@ -2,7 +2,7 @@ name: verify
 
 on:
   schedule:
-    - cron: "0 9 * * *"
+    - cron: "0/30 * * * *"
 
 permissions:
   id-token: write
