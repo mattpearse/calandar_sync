@@ -11,7 +11,7 @@ parser.add_argument("args", nargs="*")
 parser.add_argument("--end")
 args = parser.parse_args()
 end_date = datetime.strptime(args.end, "%Y-%m-%d").date()
-today = datetime.today()
+today = datetime.now()
 cal_count = 0
 cals = []
 dates = []
