@@ -47,7 +47,7 @@ prev = ""
 
 for date in dates:
     print("Debug - ", date)
-    if date <= today
+    if date <= today:
         print("Skipping..")
         continue
     if prev == "":
